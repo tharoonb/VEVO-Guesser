@@ -16,6 +16,25 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
-module.exports = {
-  solidity: "0.8.4",
+ module.exports = {
+  networks: {
+    hardhat: {
+      chainId: 1337,
+    },
+    rinkeby: {
+      url: "https://eth-rinkeby.alchemyapi.io/v2/iExNDawOnqHH63N9c0-2_o3NKqMUNAbU",
+      accounts: [privateKey],
+      gas: 2100000,
+      gasPrice: 8000000000,
+    },
+    stardust: {
+      url: "https://stardust.metis.io/?owner=588",
+      accounts: [privateKey],
+    },
+    metis: {
+      url: "https://andromeda.metis.io/?owner=1088",
+      accounts: [privateKey],
+    },
+  },
+  solidity: "0.8.9",
 };
