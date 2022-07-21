@@ -1,22 +1,29 @@
 import logo from './logo.svg';
+import React, { useState } from "react"
 import './App.css';
 
 function App() {
+  const [guess, setGuess] = useState("");
+
+  const handleChange = e => {
+    setGuess(e.target.value)
+  }
+
+
   return (
-    <div className="App">
+    <div className="VEVO GUESSER">
+      <h1 className="title">
+        VEVO GUESSER
+      </h1>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          *replace with screen grab*
+        </div>
+        <form className="challengeBox">
+          <label className="inputBox">
+            Your guess: <input className="guessBox" type ="text" onChange={handleChange} />
+          </label>
+        </form>
       </header>
     </div>
   );

@@ -19,9 +19,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.inputBox{
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  justify-content: center;
 }
 
 .App-link {
@@ -35,4 +43,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.guessBox{
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+  border-color:none;
 }
